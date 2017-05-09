@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link type="text/css" rel="stylesheet" href="slideshow.css">
+</head>
+<body>
+	<input type="radio" id="page1" name="slide" checked="checked">
+	<input type="radio" id="page2" name="slide">
+	<input type="radio" id="page3" name="slide">
+	<input type="radio" id="page4" name="slide">
+	<div id="slideshow">
+			<div id="slideshow-contents">
+				<div class="slideshow-content">
+					<img src="1.png">
+				</div>
+				<div class="slideshow-content">
+					<img src="2.png">
+				</div>
+				<div class="slideshow-content">
+					<img src="3.png">
+				</div>
+				<div class="slideshow-content">
+					<img src="4.png">
+				</div>
+			</div>
+			<div id="slideshow-button">
+				<div class="slideshow-content">
+					<label class="slide-back"></label>
+					<label class="slide-next" for="page2"></label>
+				</div>
+				<div class="slideshow-content">
+					<label class="slide-back" for="page1"></label>
+					<label class="slide-next" for="page3"></label>
+				</div>
+				<div class="slideshow-content">
+					<label class="slide-back" for="page2"></label>
+					<label class="slide-next" for="page4"></label>
+				</div>
+				<div class="slideshow-content">
+					<label class="slide-back" for="page3"></label>
+					<label class="slide-next"></label>
+				</div>
+			</div>
+		</div>
+
+</body>
+</html>

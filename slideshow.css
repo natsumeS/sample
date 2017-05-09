@@ -1,0 +1,69 @@
+input[name="slide"]{
+	/*display:none;*/
+}
+div#slideshow {
+    width: 500px;
+    overflow: hidden;
+    position:relative;
+}
+div#slideshow-contents {
+    width: 400%;
+    transition:.6s;
+}
+.slideshow-content {
+    width: 25%;
+    float:left;
+    height:500px;
+}
+.slideshow-content img {
+    width: 80%;
+    float:left;
+    margin-left:10%;
+    margin-right:10%;
+}
+#slideshow-button{
+	width:400%;
+	height:500px;
+	position:absolute;
+	top:0;
+	left:0;
+}
+#slideshow-button .slide-back{
+	float:left;
+	width:10%;
+	height:100%;
+	background-color: black;
+	opacity:0.8;
+	margin-right:80%;
+}
+#slideshow-button .slide-next{
+	float:left;
+	width:10%;
+	height:100%;
+	background-color: black;
+	opacity:0.8;
+}
+#page1:checked~#slideshow>#slideshow-contents{
+	margin-left:0;
+}
+#page1:checked~#slideshow>#slideshow-button{
+	margin-left:0;
+}
+#page2:checked~#slideshow>#slideshow-contents{
+	margin-left:-100%;
+}
+#page2:checked~#slideshow>#slideshow-button{
+	margin-left:-100%;
+}
+#page3:checked~#slideshow>#slideshow-contents{
+	margin-left:-200%;
+}
+#page3:checked~#slideshow>#slideshow-button{
+	margin-left:-200%;
+}
+#page4:checked~#slideshow>#slideshow-contents{
+	margin-left:-300%;
+}
+#page4:checked~#slideshow>#slideshow-button{
+	margin-left:-300%;
+}
