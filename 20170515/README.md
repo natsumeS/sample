@@ -6,4 +6,4 @@
 [sample page](http://natsume.php.xdomain.jp/sample/20170515/scroll.html)
 * index.html  
 名前と性別の入力フォーム例  
-[sample page](http://natsume.php.xdomain.jp/sample/20170515/index.html)
+[sample page](http://natsume.php.xdomain.jp/sample/20170515/input.html)
