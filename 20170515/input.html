@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+	<p>名前</p>
+	<input type="text" id="name" value=""/>
+	<p>性別</p>
+	<input type="radio" name="sex" value="male" id="male" checked="checked"/><label for="male">男性</label>
+	<input type="radio" name="sex" value="female" id="female"/><label for="female">女性</label>
+	<button id="register">登録</button>
+	<div id="confirmation"></div>
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+	jQuery(function($){
+		var name;
+		var sex;
+		$('#register').on('click',function(){
+			name=$('#name').val();
+			sex=$('input[name=sex]:checked').val();
+			if(name==""){
+				$('#confirmation').html("名前を入力してください！");
+			}else if(sex==""){
+				$('#confirmation').html("性別を入力してください！");
+			}else{
+				$('#confirmation').html("<ul><li>name:"+name+"</li><li>sex:"+sex+"</li></ul>");
+			}
+			
+		});
+	});
+	
+	</script>
+</body>
+</html>
