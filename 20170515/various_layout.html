@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<style>
+	#content{
+		width:100%;
+		height:500px;
+	}
+	.default{
+		background-color:white;
+	}
+	.default p{
+		color:black;
+	}
+	.blue{
+		background-color:blue;
+	}
+	.blue p{
+		color:white;
+	}
+	.yellow{
+		background-color:yellow;
+	}
+	.yellow p{
+		color:black;
+	}
+	.green{
+		background-color:green;
+	}
+	.green p{
+		color:white;
+	}
+	</style>
+</head>
+<body>
+	<div id="setting">
+		<input type="radio" name="setting" value="default" id="default" checked="checked"><label for="default">default</label>
+		<input type="radio" name="setting" value="blue" id="blue"><label for="blue">blue theme</label>
+		<input type="radio" name="setting" value="yellow" id="yellow"><label for="yellow">yellow theme</label>
+		<input type="radio" name="setting" value="green" id="green"><label for="green">green theme</label>
+		<button id="setting_btn">変更</button>
+	</div>
+	<div id="content" class="default">
+		<p>上のラジオボタンで、このページのレイアウトを変えられます。</p>
+	</div>
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+	jQuery(function($){
+		var before_setting=$('input[name=setting]:checked').val();
+		$('#setting_btn').on('click',function(){
+			$('#content').removeClass(before_setting);
+			before_setting=$('input[name=setting]:checked').val();
+			$('#content').addClass(before_setting);
+		});
+		
+	});
+	
+	</script>
+</body>
+</html>
