@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+	<button id="counter">ここをクリックしてね</button>
+	<p id="counter_display"></p>
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+	jQuery(function($){
+		var counter=0;
+		$('#counter').on('click',function(){
+			counter++;
+			$('#counter_display').html(counter+"回クリックしました。");
+		});
+	});
+	
+	</script>
+</body>
+</html>

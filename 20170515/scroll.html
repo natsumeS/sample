@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<style>
+	header{
+		width:100%;
+		height:50px;
+		position:fixed;
+		top:0;
+		left:0;
+		background:black;
+		opacity:0;
+		line-height: 50px;
+		color: white;
+	}
+	#content{
+		margin-top:60px;
+	}
+
+	</style>
+</head>
+<body>
+	<header>HEADER</header>
+	<div id="content">
+		<p>下にスクロールするとヘッダーが徐々に現れてきます</p>
+		<ul id="many_content"></ul>
+	</div>
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+	jQuery(function($){
+		var scroll_change_point=1500;
+		var counter;
+		var scroll;
+		for(counter=0;counter<100;counter++){
+			$('#many_content').append('<li>counter='+counter+"</li>");
+		}
+		$(window).scroll(function(){
+			scroll=$(window).scrollTop();
+			if(scroll<scroll_change_point){
+				$('header').css('opacity',scroll/scroll_change_point);
+			}
+		});		
+	});
+	
+	</script>
+</body>
+</html>
