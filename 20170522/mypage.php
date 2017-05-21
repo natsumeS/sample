@@ -7,14 +7,12 @@ if($name==""){
 }
 $userData=array(
 	"taro"=>"abc","jiro"=>"def");
-if(!$userData[$name]){
-	echo '...username "'.$name.'" is not exist';
-	header("Refresh:1;url=post_submit.php");
+if(!$userData[$name]){;
+	header("Location:post_submit.php?error=1");
 	exit;
 }
 if($userData[$name]!=$password){
-	echo '...password is not correct';
-	header("Refresh:1;url=post_submit.php");
+	header("Location:post_submit.php?error=2");
 	exit;
 }
 ?>
