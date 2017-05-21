@@ -23,6 +23,14 @@
 	<p>変数xが0でないときに表示されます</p>
 	<?php endif;?>
 
+<li>配列</li>
+
+	<?php
+	$list=array(1,"abc","taro");
+	?>
+	<p><?php echo $list[0];?></p>
+	<p><?php echo $list[1];?></p>
+	<p><?php echo $list[2];?></p>
 <li>連想配列の利用例</li>
 
 <?php
