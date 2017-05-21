@@ -8,6 +8,7 @@ GET通信のサンプル
 POST通信のサンプル  
 [sample page](http://natsume.php.xdomain.jp/sample/20170522/post_submit.php)  
 ※ 今回は簡単のためパスワードをそのまま格納していますが、実際にはパスワードをハッシュ化して保存します。
+* json.php  
 JSONファイルの読み込み
 [sample page](http://natsume.php.xdomain.jp/sample/20170522/json.php)  
 ※jsonファイルを連想配列にして扱います。
