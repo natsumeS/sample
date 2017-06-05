@@ -1,0 +1,20 @@
+{
+	"taro":{
+		"password":"abc",
+		"profile":"毎日一つぶやき",
+		"photo":"http://natsume.php.xdomain.jp/sample/20170522/img/19.png",
+		"photo_id":[1,2,5]
+	},
+	"jiro":{
+		"password":"def",
+		"profile":"動画を毎日あげています。",
+		"photo":"http://natsume.php.xdomain.jp/sample/20170522/img/20.png",
+		"photo_id":[3,7]
+	},
+	"hanako":{
+		"password":"xyz",
+		"profile":"多くの書籍を出品しています",
+		"photo":"http://natsume.php.xdomain.jp/sample/20170522/img/21.png",
+		"photo_id":[4,6,8]
+	}
+}

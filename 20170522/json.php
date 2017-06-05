@@ -1,7 +1,7 @@
 <?php
 
 // jsonファイルの読み込み
-$url="data.json";
+$url="kadai/data.json";
 $json_contents=file_get_contents($url);
 $json=mb_convert_encoding($json_contents,'UTF8','ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
 
