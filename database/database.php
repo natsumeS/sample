@@ -8,7 +8,12 @@ class Database{
 	
 	//データベースにアクセス
 	public function __construct(){
-		$this->pdo = new PDO('mysql:host=?????;dbname=?????;charset=utf8','??????','???????',array(PDO::ATTR_EMULATE_PREPARES => false));
+		try{
+			$this->pdo = new PDO('mysql:host=?????;dbname=?????;charset=utf8','??????','???????',array(PDO::ATTR_EMULATE_PREPARES => false));
+		}catch(PDOException $e){
+			exit('Connection failed:'.$e->getMessage());
+		}
+		
 	}
 	//クエリを実行
 	public function QueryProcess($sql,$args){
