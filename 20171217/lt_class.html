@@ -1,0 +1,35 @@
+<svg id="aaa" width="400" height="300"></svg>
+<button id="btn1">button1</button>
+<button id="btn2">button2</button>
+<button id="btnclear">clear</button>
+<button id="btnremove">remove</button>
+<script src="class.js"></script>
+<script type="text/javascript">
+var svg=document.getElementById("aaa");
+//
+var text1=new Text(svg,100,100,"red","test");
+var text2=new Text(svg,200,200,"blue","sample");
+var circle1=new Circle(svg,300,100,50,"yellow");
+var circle2=new Circle(svg,100,200,50,"green");
+var svglist=[text1,text2,circle1,circle2];
+//
+document.getElementById("btn1").addEventListener("click",function(){
+	text1.btnclick("green");
+	circle1.btnclick(100);
+},false);
+document.getElementById("btn2").addEventListener("click",function(){
+	text2.btnclick("black");
+	circle2.btnclick(100);
+});
+//元に戻す。
+document.getElementById("btnclear").addEventListener("click",function(){
+	svglist.forEach(function(v,i,a){
+		v.btnclear();
+	});
+});
+document.getElementById("btnremove").addEventListener("click",function(){
+	svglist.forEach(function(v,i,a){
+		v.remove();
+	});
+});
+</script>

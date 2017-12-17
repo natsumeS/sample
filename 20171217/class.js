@@ -1,0 +1,38 @@
+function Text(svg,x,y,fill,content){
+	this.ob=document.createElementNS(svg.namespaceURI,"text");
+	this.fill=fill;
+	//
+	this.ob.setAttribute("x",x);
+	this.ob.setAttribute("y",y);
+	this.ob.setAttribute("fill",fill);
+	this.ob.textContent=content;
+	svg.appendChild(this.ob);
+}
+Text.prototype.btnclick=function(fill){
+	this.ob.setAttribute("fill",fill);
+}
+Text.prototype.btnclear=function(){
+	this.ob.setAttribute("fill",this.fill);
+}
+Text.prototype.remove=function(){
+	this.ob.parentNode.removeChild(this.ob);
+}
+function Circle(svg,cx,cy,r,fill){
+	this.ob=document.createElementNS(svg.namespaceURI,"circle");
+	this.r=r;
+	//
+	this.ob.setAttribute("cx",cx);
+	this.ob.setAttribute("cy",cy);
+	this.ob.setAttribute("r",r);
+	this.ob.setAttribute("fill",fill);
+	svg.appendChild(this.ob);
+}
+Circle.prototype.btnclick=function(r){
+	this.ob.setAttribute("r",r);
+}
+Circle.prototype.btnclear=function(){
+	this.ob.setAttribute("r",this.r);
+}
+Circle.prototype.remove=function(){
+	this.ob.parentNode.removeChild(this.ob);
+}
